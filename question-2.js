@@ -10,6 +10,7 @@ async function apiFunction() {
     const respons = await fetch(url + key);
     const result = await respons.json();
     for (let i = 0; i < 8; i++) {
+      //remove loading if the API call successful
       loading.innerHTML = "";
       container.innerHTML += `<div class="items"> <h1>${result.results[i].name}</h1>
             <p>rating:${result.results[i].rating}</p>
